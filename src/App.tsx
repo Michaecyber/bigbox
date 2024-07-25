@@ -22,6 +22,7 @@ import MessageBox from './components/MessageBox'
 import { getError } from './utils'
 import { ApiError } from './types/ApiError'
 import SearchBox from './components/SearchBox'
+import { Data } from './components/Data'
 
 function App() {
   const {
@@ -209,7 +210,8 @@ function App() {
       </div>
 
       <main>
-        <Container className="mt-3">
+        <Container className="mt-3">    
+          <Data />     
           <Outlet />
         </Container>
       </main>
