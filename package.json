@@ -1,7 +1,7 @@
 {
-  "name": "ts-mern-amazona",
+  "name": "brooklyn-store",
   "version": "1.0.0",
-  "description": "## Lessons",
+  "description": "## Camera-store",
   "main": "index.js",
   "scripts": {
     "dev": "concurrently \"npm run dev --prefix backend\"  \"npm run dev --prefix frontend\" ",
@@ -11,15 +11,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/basir/ts-mern-amazona.git"
+    "url": "git+https://github.com/basir/Michaecyber"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/basir/ts-mern-amazona/issues"
+    "url": "https://github.com/basir/Michaecyber"
   },
-  "homepage": "https://github.com/basir/ts-mern-amazona#readme",
+  "homepage": "https://github.com/Michaecybere",
   "devDependencies": {
     "concurrently": "^8.0.1"
+  },
+  "dependencies": {
+    "@typegoose/typegoose": "^12.6.0",
+    "mongoose": "^8.5.1"
   }
 }
