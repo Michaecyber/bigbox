@@ -12,7 +12,7 @@ import { userRouter } from './routers/userRouter'
 dotenv.config()
 
 const MONGODB_URI =
-  process.env.MONGODB_URI || 'mongodb://localhost/brooklynstoredb'
+  process.env.MONGODB_URI || 'mongodb://brooklynstore-api.onrender.com/brooklynstoredb'
 mongoose.set('strictQuery', true)
 mongoose
   .connect(MONGODB_URI)
@@ -27,7 +27,7 @@ const app = express()
 app.use(
   cors({
     credentials: true,
-    origin: ['http://localhost:5173'],
+    origin: ['https://brooklynstore-api.onrender.com'],
   })
 )
 
@@ -45,8 +45,8 @@ app.get('*', (req: Request, res: Response) =>
   res.sendFile(path.join(__dirname, '../../frontend/dist/index.html'))
 )
 
-const PORT: number = parseInt((process.env.PORT || '4000') as string, 10)
+const PORT: number = parseInt((process.env.PORT || '0.0.0.0/0') as string, 10)
 
 app.listen(PORT, () => {
-  console.log(`server started at http://localhost:${PORT}`)
+  console.log(`server started at https://brooklynstore-api.onrender.com:${PORT}`)
 })
