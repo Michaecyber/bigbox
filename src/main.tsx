@@ -26,6 +26,7 @@ import OrderPage from './pages/OrderPage'
 import { PayPalScriptProvider } from '@paypal/react-paypal-js'
 import OrderHistoryPage from './pages/OrderHistoryPage'
 import ProfilePage from './pages/ProfilePage'
+import { disableReactDevTools } from '@fvilers/disable-react-devtools'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -51,6 +52,8 @@ const router = createBrowserRouter(
 )
 
 const queryClient = new QueryClient()
+
+if (process.env.NODE_ENV === 'production') disableReactDevTools()
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
