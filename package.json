@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/basir/Michaecyber.git"
+    "url": "git+https://github.com/brooklyn-rgb/brooklyn.git"
   },
   "author": "Mac",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/basir/Michaecyber"
+    "url": "https://github.com/brooklyn-rgb/brooklyn"
   },
-  "homepage": "https://github.com/Michaecybere",
+  "homepage": "https://github.com/brooklyn-rgb",
   "devDependencies": {
     "concurrently": "^8.0.1"
   },
