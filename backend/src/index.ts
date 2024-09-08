@@ -12,7 +12,7 @@ import { userRouter } from './routers/userRouter'
 dotenv.config()
 
 const MONGODB_URI =
-  process.env.MONGODB_URI || 'mongodb://bigbox.vercel.app/brooklynstoredb'
+  process.env.MONGODB_URI || 'mongodb://localhost/brooklynstoredb'
 mongoose.set('strictQuery', true)
 mongoose
   .connect(MONGODB_URI)
@@ -27,7 +27,7 @@ const app = express()
 app.use(
   cors({
     credentials: true,
-    origin: ['https://bigbox.vercel.app'],
+    origin: ['http://localhost:5173'],
   })
 )
 
@@ -48,5 +48,5 @@ app.get('*', (req: Request, res: Response) =>
 const PORT: number = parseInt((process.env.PORT || '4000') as string, 10)
 
 app.listen(PORT, () => {
-  console.log(`server started at https://bigbox.vercel.app:${PORT}`)
+  console.log(`server started at http://localhost:${PORT}`)
 })
